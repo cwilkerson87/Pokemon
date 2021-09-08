@@ -1,3 +1,5 @@
+package me.pokemon.battle.moves;
+
 public interface FireMove {
 
     int flamethrowerDamage = 40;

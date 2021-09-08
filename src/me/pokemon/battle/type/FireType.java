@@ -1,30 +1,47 @@
+package me.pokemon.battle.type;
+
+import me.pokemon.battle.Pokemon;
+import me.pokemon.battle.PokemonList;
+import me.pokemon.battle.moves.FireMove;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class FireType extends Pokemon implements FireMove{
+public class FireType extends Pokemon implements FireMove {
 
-   private final String name = "Charmander";
-   private List move = new ArrayList();
-   private String getMove = "";
+    private PokemonList fireList = new PokemonList();
+//    private List <String> name = new ArrayList<>();
+    private String name;
+    private List move = new ArrayList();
+    private String getMove = "";
 
 
-    public String getName(){
-        return name;
+    public List getFireTypeName(){
+        return fireList.getFireType();
+    }
+
+    public void setPokemonName(String name){
+        this.name = name;
     }
 
     @Override
-    String attack() {
+    public String getName(){
+        return this.name;
+    }
+
+    @Override
+    public String attack() {
        return moves();
     }
 
     @Override
-    String defend() {
+   public String defend() {
         return getName() + " dodged the attack!";
     }
 
     //Pokemon Moves
-    String moves(){
+    public String moves(){
 
         Random ran = new Random();
 

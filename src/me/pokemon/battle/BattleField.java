@@ -1,3 +1,5 @@
+package me.pokemon.battle;
+
 import java.util.Scanner;
 
 public class BattleField {

@@ -1,29 +1,45 @@
+package me.pokemon.battle.type;
+
+import me.pokemon.battle.Pokemon;
+import me.pokemon.battle.PokemonList;
+import me.pokemon.battle.moves.ElectricMove;
+
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class ElectricType extends Pokemon implements ElectricMove{
+public class ElectricType extends Pokemon implements ElectricMove {
 
-    private final String name = "Pikachu";
+    private String name;
     private List move = new ArrayList();
     private String getMove = "";
+    private PokemonList electricList = new PokemonList();
+
+    public List getElectricTypeName(){
+        return electricList.getFireType();
+    }
+
+    public void setPokemonName(String name){
+        this.name = name;
+    }
 
     public String getName(){
         return name;
     }
 
     @Override
-    String attack() {
+    public String attack() {
         return moves();
     }
 
     @Override
-    String defend() {
+    public String defend() {
         return getName() + " dodged the attack!";
     }
 
     //Pokemon Moves
-     String moves(){
+    public String moves(){
 
         Random ran = new Random();
 

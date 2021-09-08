@@ -1,3 +1,5 @@
+package me.pokemon.battle.moves;
+
 import java.util.ArrayList;
 
 public interface ElectricMove {
